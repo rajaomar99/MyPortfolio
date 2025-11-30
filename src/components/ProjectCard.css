@@ -1,0 +1,44 @@
+.title{
+    font-size: 2rem;
+}
+
+.project-card{
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #de1d3e;
+    border-radius: 20px;
+    justify-content: space-around;
+    font-family: 'Outfit';
+    color: white;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+
+.tech-stack{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    gap: 1.4rem;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.tech-stack img{
+    width: 2.8rem;
+}
+
+.project-card:hover{
+    background-color: white;
+    color: #de1d3e;
+    border: 5px solid #de1d3e;
+}
+
+@media screen and (max-width: 499px) {
+    .project-card{
+        width: 25rem;
+    }
+}

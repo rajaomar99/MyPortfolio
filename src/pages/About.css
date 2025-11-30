@@ -1,0 +1,26 @@
+.about-box{
+    display: flex;
+    flex-direction: column;
+    background-color: #de1d3e;
+    margin: 1.5rem auto;
+    font-size: 1.4rem;
+    align-items: center;
+    justify-content: center;
+    max-width: 80vw;
+    height: max-content;
+    color: white;
+    font-family: 'Outfit';
+    gap: 2rem;
+    border-radius: 20px;
+    padding: 5rem 0;
+}
+
+.about-box div{
+    max-width: 75%;
+    line-height: 2rem;
+}
+
+.about-me{
+    font-size: 2rem;
+    font-weight: 700;
+}

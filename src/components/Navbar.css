@@ -1,0 +1,155 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 80vw;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.logo{
+    width: 9rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.box {
+    padding: 8px;
+    font-family: "Outfit";
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: rgb(5, 5, 5);
+    cursor: pointer;
+    transition: all 500ms ease-out;
+}
+
+.box:hover {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 3px;
+    font-size: 1.4rem;
+}
+
+.navbar .lets-talk-but button {
+    font-size: 1.3rem;
+    padding: 10px 25px 10px 25px;
+    border-radius: 8px;
+    border: 2px solid black;
+    color: white;
+    background-color: #de1d3e;
+    cursor: pointer;
+    transition: all 500ms ease-out;
+}
+
+.navbar .lets-talk-but button:hover {
+    background-color: white;
+    color: #de1d3e;
+    font-size: 1.4rem;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.menu-icon .bar1,
+.bar2 {
+    width: 1.6rem;
+    height: 1.5px;
+    border: none;
+    background-color: black;
+    margin: 4px 4px;
+    transition: all 0.4s ease-out;
+}
+
+.menu-icon .bar1 {
+    width: 2.5rem !important;
+}
+
+@media screen and (max-width: 999px) {
+    nav {
+        max-width: 95vw;
+    }
+
+    .menu-icon {
+        display: flex;
+        z-index: 1000;
+    }
+
+    .menu-icon.open .bar1 {
+        background-color: white;
+    }
+
+    .menu-icon.open .bar2 {
+        background-color: white;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #de1d3e;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+        transition: all 0.4s ease-in-out;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .nav-links .box {
+        color: white;
+    }
+
+    .navbar .lets-talk-but button {
+        font-size: 1.3rem;
+        padding: 10px 25px 10px 25px;
+        border-radius: 8px;
+        border: 2px solid black;
+        color: #de1d3e;
+        background-color: white;
+        cursor: pointer;
+        transition: all 500ms ease-out;
+    }
+
+    .navbar .lets-talk-but button:hover {
+        font-size: 1.4rem;
+    }
+
+    .box:hover{
+        text-decoration-color: white;
+    }
+
+    html{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:499px){
+    html{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 399px){
+    html{
+        font-size: 9px;
+    }
+}

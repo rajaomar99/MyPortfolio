@@ -1,0 +1,10 @@
+.projects-box{
+    display: flex;
+    max-width: 80vw;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
