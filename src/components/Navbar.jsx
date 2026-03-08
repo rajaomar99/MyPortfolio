@@ -1,15 +1,11 @@
-import {React,useState, useEffect} from 'react'
-import './Navbar.css'
+import {useState} from 'react';
+import './Navbar.css';
 import { Link } from 'react-router-dom';
-import rajaomar from '../assets/rajaomar.png';
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav>
-
-      <div><img src={rajaomar} alt='logo' className='logo'></img></div>
 
       <div className={`menu-icon ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
         <div className="bar1"></div>

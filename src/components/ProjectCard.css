@@ -1,44 +1,132 @@
-.title{
-    font-size: 2rem;
-}
-
-.project-card{
-    width: 20rem;
-    height: 20rem;
+.project-card {
+    width: 100%;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.8rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: #de1d3e;
-    border-radius: 20px;
-    justify-content: space-around;
-    font-family: 'Outfit';
-    color: white;
+    gap: 1.2rem;
     cursor: pointer;
-    transition: all 400ms ease-in-out;
+    transition: var(--transition);
+    font-family: 'Space Grotesk', 'Outfit', sans-serif;
+    position: relative;
+    overflow: hidden;
 }
 
-.tech-stack{
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-accent);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px var(--border-accent);
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+.card-top {
     display: flex;
-    flex-wrap: wrap;
-    background-color: white;
-    gap: 1.4rem;
-    padding: 10px;
-    border-radius: 10px;
-    max-width: 80%;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.tech-stack img{
-    width: 2.8rem;
+.card-number {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    opacity: 0.7;
 }
 
-.project-card:hover{
-    background-color: white;
-    color: #de1d3e;
-    border: 5px solid #de1d3e;
+.card-arrow {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    transition: var(--transition);
+    line-height: 1;
+}
+
+.project-card:hover .card-arrow {
+    color: var(--accent);
+    transform: translate(2px, -2px);
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.01em;
+}
+
+.card-snippet {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+.tech-stack {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.tech-stack img {
+    width: 1.6rem;
+    height: 1.6rem;
+    object-fit: contain;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    background: #fff;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.project-card:hover .tech-stack img {
+    opacity: 1;
+}
+
+.card-cta {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: var(--transition);
+}
+
+.project-card:hover .card-cta {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 @media screen and (max-width: 499px) {
-    .project-card{
-        width: 25rem;
+    .project-card {
+        padding: 1.4rem;
     }
 }

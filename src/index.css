@@ -1,18 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
-* {
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #111118;
+    --bg-card: #16161f;
+    --bg-card-hover: #1e1e2a;
+    --accent: #e8294a;
+    --accent-dim: rgba(232, 41, 74, 0.15);
+    --accent-glow: rgba(232, 41, 74, 0.4);
+    --text-primary: #f0f0f5;
+    --text-secondary: #9090a8;
+    --text-muted: #5a5a70;
+    --border: rgba(255, 255, 255, 0.07);
+    --border-accent: rgba(232, 41, 74, 0.3);
+    --glass: rgba(22, 22, 31, 0.85);
+    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+    --shadow-accent: 0 8px 32px rgba(232, 41, 74, 0.25);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    background-color: rgb(245, 245, 245);
+html {
+    background-color: var(--bg-primary);
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-.line{
-    background-color: rgb(225, 225, 225);
-    height: 2px;
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Space Grotesk', 'Outfit', sans-serif;
+    min-height: 100vh;
+    background-image:
+        radial-gradient(ellipse 80% 60% at 50% -20%, rgba(232, 41, 74, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 80% 80%, rgba(100, 60, 200, 0.04) 0%, transparent 50%);
+    background-attachment: fixed;
+}
+
+.line {
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    height: 1px;
     width: 80vw;
     margin: auto;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+/* Selection */
+::selection {
+    background: var(--accent-dim);
+    color: var(--accent);
 }

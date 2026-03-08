@@ -28,22 +28,38 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-form-container">
-      <form ref={form} onSubmit={sendEmail} className="contact-form">
-        <div className='contact-me'>Contact Me</div>
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-        {error && (
-          <div>Failed to send message. Please try again later.</div>
-        )}
-        {sent && (
-          <div>I've received your message and will be reaching out to you shortly.</div>
-        )}
-      </form>
+    <div className="contact-form-page">
+      <div className="contact-form-header">
+        <span className="section-tag">Contact</span>
+        <h1>Send a <span>Message</span></h1>
+      </div>
+
+      <div className="contact-form-wrapper">
+        <form ref={form} onSubmit={sendEmail} className="contact-form">
+          <div className='form-group'>
+            <label htmlFor="name">Your Name</label>
+            <input id="name" type="text" name="name" placeholder="John Doe" required />
+          </div>
+          <div className='form-group'>
+            <label htmlFor="email">Email Address</label>
+            <input id="email" type="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div className='form-group'>
+            <label htmlFor="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button className="submit-btn" type="submit">Send Message →</button>
+          {error && (
+            <div className="form-message error">Failed to send message. Please try again later.</div>
+          )}
+          {sent && (
+            <div className="form-message success">Message received! I'll get back to you shortly.</div>
+          )}
+        </form>
+      </div>
     </div>
   );
 };
 
 export default ContactForm;
+

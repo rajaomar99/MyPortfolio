@@ -7,7 +7,7 @@ import facebookIcon from "../assets/facebook-02-stroke-rounded.svg";
 export const iconsInfo = [
     {
         icon: fiverrIcon,
-        link: 'https://fiverr.com/rajaomar5'
+        link: ''
     },
     {
         icon: githubIcon,
@@ -15,7 +15,7 @@ export const iconsInfo = [
     },
     {
         icon: linkedinIcon,
-        link: 'https://pk.linkedin.com/in/raja-omar-138610321?trk=people-guest_people_search-card'
+        link: 'https://pk.linkedin.com/in/rajaomar-dev'
     },
     {
         icon: instagramIcon,
