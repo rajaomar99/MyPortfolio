@@ -2,12 +2,12 @@ import React from 'react'
 import './About.css'
 
 const skills = [
-  { label: "React / Next.js", level: 92 },
-  { label: "Node.js / Express", level: 88 },
-  { label: "TypeScript", level: 80 },
-  { label: "MongoDB / PostgreSQL", level: 85 },
-  { label: "Tailwind CSS", level: 90 },
-  { label: "AI / LLM Integration", level: 70 },
+  "React / Next.js",
+  "Node.js / Express",
+  "TypeScript",
+  "MongoDB / PostgreSQL",
+  "Tailwind CSS",
+  "AI / LLM Integration",
 ];
 
 const About = () => {
@@ -46,17 +46,14 @@ const About = () => {
         <div className='about-skills-col'>
           <div className='skills-card'>
             <div className='skills-card-title'>Core Skills</div>
-            {skills.map(skill => (
-              <div key={skill.label} className='skill-row'>
-                <div className='skill-meta'>
-                  <span className='skill-name'>{skill.label}</span>
-                  <span className='skill-pct'>{skill.level}%</span>
+            <div className='core-skills-grid'>
+              {skills.map(skill => (
+                <div key={skill} className='core-skill-card'>
+                  <div className='core-skill-dot'></div>
+                  <span className='core-skill-name'>{skill}</span>
                 </div>
-                <div className='skill-bar-bg'>
-                  <div className='skill-bar-fill' style={{ width: `${skill.level}%` }}></div>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

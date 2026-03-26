@@ -20,7 +20,7 @@ const ProjectDetails = () => {
 
       <div className='details-hero'>
         <div className='details-left'>
-          <button className='details-back' onClick={() => navigate(-1)}>← Back to Projects</button>
+          <button className='details-link-btn' onClick={() => navigate(-1)}>← Back to Projects</button>
           <div className='details-title'>{proj.title}</div>
           <div className='techstack-box'>
             {proj.techstack.map((tech, i) => (

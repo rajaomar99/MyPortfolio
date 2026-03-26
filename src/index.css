@@ -44,6 +44,10 @@ body {
     background-attachment: fixed;
 }
 
+.App {
+    padding-top: 72px;
+}
+
 .line {
     background: linear-gradient(90deg, transparent, var(--border), transparent);
     height: 1px;

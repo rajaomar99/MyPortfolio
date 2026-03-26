@@ -24,21 +24,7 @@
 }
 
 .details-back {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--text-muted);
-    cursor: pointer;
-    transition: var(--transition);
-    text-decoration: none;
-    width: fit-content;
-}
-
-.details-back:hover {
-    color: var(--accent);
-    transform: translateX(-3px);
+    display: none;
 }
 
 .details-title {
@@ -130,10 +116,10 @@
 
 /* ─── Image slider ─── */
 .content-grid {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
-    align-items: start;
+    align-items: stretch;
     margin-top: 2.5rem;
     padding-bottom: 4rem;
 }
@@ -151,8 +137,7 @@
 
 .images-box img {
     width: 100%;
-    max-height: 340px;
-    object-fit: cover;
+    height: auto;
     display: block;
     border-radius: var(--radius);
 }
@@ -195,9 +180,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .content-grid {
-        grid-template-columns: 1fr;
-    }
+    /* No longer needed but keeping MQ hook if we add rules */
 }
 
 @media screen and (max-width: 768px) {
@@ -208,10 +191,6 @@
     .details-hero {
         flex-direction: column;
         align-items: flex-start;
-    }
-
-    .images-box img {
-        max-height: 240px;
     }
 }
 
